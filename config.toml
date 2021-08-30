@@ -1,5 +1,5 @@
 # default configuration
-baseURL = "http://bee4people.github.io"
+baseURL = "http://bee4people.github.io/website"
 languageCode = "en-us"
 summaryLength = "10"
 theme = "bee4people"
