@@ -1,0 +1,91 @@
+{{ define "main" }}
+
+{{ partial "page-title.html" . }}
+
+{{ if site.Params.map.enable }}
+<section class="section pb-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">Find me on Google Map</h2>
+      </div>
+      <div class="col-12">
+        {{ with site.Params.map }}
+        {{"<!-- Google Map -->" | safeHTML}}
+        <div class="shadow" id="map" data-latitude="{{ .map_latitude }}" data-longitude="{{ .map_longitude }}"
+          data-marker="{{ .map_marker | absURL }}" data-marker-name="{{ site.Title }}" style="height: 400px;"></div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      {{ if isset .Params "image" }}
+      <div class="col-lg-9 text-center mb-4">
+        <img src="{{.Params.image | absURL }}" alt="{{.Title}}" class="img-fluid rounded mb-4">
+      </div>
+      {{ end }}
+      <div class="col-lg-9">
+        <div class="content">
+          {{.Content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">Folge uns</h2>
+      </div>
+      <div class="col-12">
+        <ul class="list-inline social-icons text-center">
+          {{ range site.Params.social }}
+          <li class="list-inline-item"><a href="{{.URL}}"><i class="{{.icon}}"></i></a></li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-on-footer" data-background="{{`images/backgrounds/bg-dots.png` | absURL}}">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title">Kontaktinformationen</h2>
+      </div>
+      <div class="col-lg-8 mx-auto">
+        <div class="bg-white rounded text-center p-5 shadow-down">
+          <h4 class="mb-80">Kontaktformular</h4>
+          <form action="{{site.Params.contact.form_action}}" method="POST" class="row">
+            <div class="col-md-6">
+              <input type="text" id="name" name="name" placeholder="Name" class="form-control px-0 mb-4">
+            </div>
+            <div class="col-md-6">
+              <input type="email" id="email" name="email" placeholder="Email Adresse" class="form-control px-0 mb-4">
+            </div>
+            <div class="col-12">
+              <textarea name="message" id="message" class="form-control px-0 mb-4"
+                placeholder="Nachricht"></textarea>
+            </div>
+            <div style="position: absolute; left: -5000px;">
+              <input type="checkbox" name="sweet_khaki_waved_soup" value="1" tabindex="-1" autocomplete="no">
+            </div>
+            <div class="col-lg-6 col-10 mx-auto">
+              <button class="btn btn-primary w-100">send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}
