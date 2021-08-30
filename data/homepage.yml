@@ -1,0 +1,61 @@
+# banner
+banner:
+  title : "Bee4people"
+  subtitle: "Hilfe zur Selbsthilfe für Suchtkranke"
+
+# about
+about:
+  enable : true
+  content : "Wir sind ein lokales Bienenprojekt aus Karlsruhe, bestehend aus Studierenden und suchtkranken Menschen, die sich gemeinsam mit dem Imkerhandwerk beschäftigen. Lerne uns und unser Projekt genauer kennen und folge uns auf unserem Weg, die Welt ein kleines bisschen zu verändern."
+  buttons:
+    - enable : true
+      label : "Unser Projekt"
+      URL : "about"
+
+    - enable : true
+      label : "Unser Team"
+      URL : "#"
+
+    - enable : true
+      label : "Unsere Produkte"
+      URL : "#"
+
+# client logo slider
+clients_logo_slider:
+  enable : true
+  item:
+    - logo : "images/clients-logo/referenzen_bbbank-1.webp"
+      URL : "#"
+      
+    - logo : "images/clients-logo/referenzen_ford.webp"
+      URL : "#"
+      
+    - logo : "images/clients-logo/referenzen_volksbank.webp"
+      URL : "#"
+
+    - logo : "images/clients-logo/logo-rc-ka-faecherstadt-hk-preis.webp"
+      URL : "#"
+      
+    - logo : "images/clients-logo/neu-sparkasse_ka_negativ_rot-01-1.webp"
+      URL : "#"
+      
+    - logo : "images/clients-logo/referenzen_bbbank-1.webp"
+      URL : "#"
+      
+    - logo : "images/clients-logo/referenzen_ford.webp"
+      URL : "#"
+      
+    - logo : "images/clients-logo/referenzen_volksbank.webp"
+      URL : "#"
+
+    - logo : "images/clients-logo/logo-rc-ka-faecherstadt-hk-preis.webp"
+      URL : "#"
+      
+    - logo : "images/clients-logo/neu-sparkasse_ka_negativ_rot-01-1.webp"
+      URL : "#"
+      
+# blog
+blog:
+  enable : true
+  title : "Blogs"
+  # blog post comes from "content/blog" folder

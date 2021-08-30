@@ -1,0 +1,29 @@
+<div class="spoiler w-100">
+    {{- with (.Get "content") -}}
+    <div class="spoiler-content">
+        <p class="spoiler-text">
+            {{ . }}
+        </p>
+    </div>
+    {{end}}
+</div>
+
+<style>
+    .spoiler {
+        padding: 30px;
+        background-color: #E0E0E0;
+    }
+
+    .spoiler-content {
+        visibility: hidden;
+        height: fit-content;
+    }
+
+    .spoiler-text {
+        margin: 0px;
+    }
+
+    .spoiler:hover .spoiler-content {
+        visibility: visible;
+    }
+</style>
